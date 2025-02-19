@@ -6,7 +6,7 @@
 /*   By: jalahaye <jalahaye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 09:56:09 by skafir            #+#    #+#             */
-/*   Updated: 2025/02/19 08:49:53 by jalahaye         ###   ########.fr       */
+/*   Updated: 2025/02/19 09:32:26 by jalahaye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,11 +66,7 @@ int	main(void)
 	ft_putstr_fd("Server PID : ", 1);
 	client_pid = ft_itoa(getpid());
 	x = 0;
-	while (client_pid[x])
-	{
-		ft_putchar_fd(client_pid[x], 1);
-		x++;
-	}
+	ft_putstr_fd(client_pid, 1);
 	ft_putchar_fd('\n', 1);
 	free(client_pid);
 	signal_(SIGUSR1, handle_signal, 1);
