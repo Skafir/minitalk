@@ -6,7 +6,7 @@
 /*   By: jalahaye <jalahaye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 09:56:09 by skafir            #+#    #+#             */
-/*   Updated: 2025/02/19 08:37:52 by jalahaye         ###   ########.fr       */
+/*   Updated: 2025/02/19 08:49:53 by jalahaye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ int	main(void)
 		x++;
 	}
 	ft_putchar_fd('\n', 1);
+	free(client_pid);
 	signal_(SIGUSR1, handle_signal, 1);
 	signal_(SIGUSR2, handle_signal, 1);
 	while (1)
